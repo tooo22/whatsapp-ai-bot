@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: whatsapp-ai-bot
+    env: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: ROOTLY_BASE_URL
+        value: https://secure.rootly.my.id/v1
+      - key: ROOTLY_API_KEY
+        value: sk-ry-pLQG0K3D5HqkcA4Gw4gJzZalTu0kBze7PAyCQqFD8AU
